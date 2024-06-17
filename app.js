@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Root endpoint
+// Root endpoint (testing to see if the server is up and running)
 app.get('/', (req, res) => {
     res.send('Hello, the server is up and running!');
 });
