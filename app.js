@@ -8,6 +8,11 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Root endpoint
+app.get('/', (req, res) => {
+    res.send('Hello, the server is up and running!');
+});
+
 // Endpoint to handle incoming SMS messages from Twilio
 app.post('/sms', (req, res) => {
     const smsData = req.body;
